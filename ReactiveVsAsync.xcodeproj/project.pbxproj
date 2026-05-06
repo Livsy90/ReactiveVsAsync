@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D6C27DB92FABD08500D24204 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = D6C27DB82FABD08500D24204 /* AsyncAlgorithms */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D6C27DA92FABD02700D24204 /* ReactiveVsAsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveVsAsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C27DB92FABD08500D24204 /* AsyncAlgorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = ReactiveVsAsync;
 			packageProductDependencies = (
+				D6C27DB82FABD08500D24204 /* AsyncAlgorithms */,
 			);
 			productName = ReactiveVsAsync;
 			productReference = D6C27DA92FABD02700D24204 /* ReactiveVsAsync.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = D6C27DA02FABD02700D24204;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D6C27DB72FABD08500D24204 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D6C27DAA2FABD02700D24204 /* Products */;
 			projectDirPath = "";
@@ -351,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6C27DB72FABD08500D24204 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6C27DB82FABD08500D24204 /* AsyncAlgorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6C27DB72FABD08500D24204 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6C27DA12FABD02700D24204 /* Project object */;
 }
