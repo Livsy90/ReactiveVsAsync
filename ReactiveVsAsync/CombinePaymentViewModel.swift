@@ -37,18 +37,18 @@ final class CombinePaymentViewModel: PaymentDemoViewModel {
     var feeText: String { state.feeText }
     var totalText: String { state.totalText }
 
-    @ObservationIgnored private let quoteAPI: PaymentQuoteAPI
-    @ObservationIgnored private let submitAPI: PaymentSubmitAPI
+    private let quoteAPI: PaymentQuoteAPI
+    private let submitAPI: PaymentSubmitAPI
     @ObservationIgnored private var cancellables = Set<AnyCancellable>()
     @ObservationIgnored private var submitTask: Task<Void, Never>?
     @ObservationIgnored private var latestReadyDraftAndQuote: (PaymentDraft, PaymentQuote)?
-    @ObservationIgnored private let amountTextSubject = CurrentValueSubject<String, Never>("")
-    @ObservationIgnored private let selectedAccountSubject = CurrentValueSubject<Account?, Never>(nil)
-    @ObservationIgnored private let selectedRecipientSubject = CurrentValueSubject<Recipient?, Never>(nil)
-    @ObservationIgnored private let selectedCurrencySubject = CurrentValueSubject<Currency, Never>(.nzd)
-    @ObservationIgnored private let promoCodeTextSubject = CurrentValueSubject<String, Never>("")
-    @ObservationIgnored private let networkStatusSubject = CurrentValueSubject<NetworkStatus, Never>(.online)
-    @ObservationIgnored private let featureFlagsSubject = CurrentValueSubject<FeatureFlags, Never>(
+    private let amountTextSubject = CurrentValueSubject<String, Never>("")
+    private let selectedAccountSubject = CurrentValueSubject<Account?, Never>(nil)
+    private let selectedRecipientSubject = CurrentValueSubject<Recipient?, Never>(nil)
+    private let selectedCurrencySubject = CurrentValueSubject<Currency, Never>(.nzd)
+    private let promoCodeTextSubject = CurrentValueSubject<String, Never>("")
+    private let networkStatusSubject = CurrentValueSubject<NetworkStatus, Never>(.online)
+    private let featureFlagsSubject = CurrentValueSubject<FeatureFlags, Never>(
         FeatureFlags(
             promoCodesEnabled: true,
             internationalTransfersEnabled: true
