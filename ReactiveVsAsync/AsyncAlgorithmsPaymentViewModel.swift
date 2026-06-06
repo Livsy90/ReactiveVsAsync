@@ -43,9 +43,9 @@ final class AsyncAlgorithmsPaymentViewModel: PaymentDemoViewModel {
     var feeText: String { state.feeText }
     var totalText: String { state.totalText }
 
-    @ObservationIgnored private let quoteAPI: PaymentQuoteAPI
-    @ObservationIgnored private let submitAPI: PaymentSubmitAPI
-    @ObservationIgnored private let inputEvents = AsyncChannel<Void>()
+    private let quoteAPI: PaymentQuoteAPI
+    private let submitAPI: PaymentSubmitAPI
+    private let inputEvents = AsyncChannel<Void>()
 
     @ObservationIgnored private var workerTask: Task<Void, Never>?
     @ObservationIgnored private var quoteTask: Task<Void, Never>?
