@@ -42,8 +42,8 @@ final class AsyncAwaitPaymentViewModel: PaymentDemoViewModel {
     var feeText: String { state.feeText }
     var totalText: String { state.totalText }
 
-    @ObservationIgnored private let quoteAPI: PaymentQuoteAPI
-    @ObservationIgnored private let submitAPI: PaymentSubmitAPI
+    private let quoteAPI: PaymentQuoteAPI
+    private let submitAPI: PaymentSubmitAPI
 
     @ObservationIgnored private var quoteTask: Task<Void, Never>?
     @ObservationIgnored private var submitTask: Task<Void, Never>?
